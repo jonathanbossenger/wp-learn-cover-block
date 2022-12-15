@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "WP Learn Cover Block",
+  "name": "wp-learn/cover-block",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "source": "selector",
+      "selector": "html",
+      "default": "Hello Block!"
+    },
+    "content": {
+      "type": "string",
+      "source": "selector",
+      "selector": "html",
+      "default": "I'm learning JavaScript for WordPress"
+    },
+    "backgroundColor": {
+        "type": "string",
+        "default": "secondary"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "tertiary"
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "spacing": {
+          "padding": {
+            "top": "50px",
+            "right": "50px",
+            "bottom": "50px",
+            "left": "50px"
+          }
+        },
+        "elements": {
+          "link": {
+            "color": "background"
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "color": {
+      "background": true,
+      "text": true,
+      "link": true
+    },
+    "spacing": true
+  },
+  "category": "layout",
+  "icon": "database",
+  "editorScript": "file:./block.js"
+}
